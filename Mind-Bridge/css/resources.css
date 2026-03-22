@@ -1,0 +1,178 @@
+/* =====================
+   Resources Page Styles
+   ===================== */
+
+/* Layout for resources page */
+.resources-layout {
+  display: flex;
+  flex-direction: column;
+
+/* Content area for resources */
+.resources-content {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Header row for resources */
+.resources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid layout for resource cards */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Individual resource card */
+.resource-card {
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+/* Hover effect for resource card */
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Image area in resource card */
+.resource-card__image {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}
+
+/* Gradient backgrounds for resource images */
+.bg-gradient-1 { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+.bg-gradient-2 { background: linear-gradient(135deg, #34d399, #10b981); }
+.bg-gradient-3 { background: linear-gradient(135deg, #a78bfa, #8b5cf6); }
+.bg-gradient-4 { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+.bg-gradient-5 { background: linear-gradient(135deg, #f472b6, #ec4899); }
+.bg-gradient-6 { background: linear-gradient(135deg, #38bdf8, #0ea5e9); }
+
+/* Content area inside resource card */
+.resource-card__content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Badge for resource type/category */
+.resource-badge {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-blue);
+  background: var(--accent-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Resource title */
+.resource-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+/* Resource description */
+.resource-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-lg);
+  flex: 1;
+}
+
+/* Meta info row at bottom of card */
+.resource-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid #f1f5f9;
+}
+
+/* Meta info text */
+.resource-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Small button style */
+.btn--sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+}
+
+.resource-badge {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-blue);
+  background: var(--accent-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.resource-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.resource-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-lg);
+  flex: 1;
+}
+
+.resource-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid #f1f5f9;
+}
+
+.resource-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.btn--sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+

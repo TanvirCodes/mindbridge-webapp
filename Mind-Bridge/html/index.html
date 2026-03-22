@@ -1,0 +1,228 @@
+<!-- Mind Bridge Dashboard -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mind Bridge - Student Dashboard</title>
+	<!-- Dashboard styles -->
+	<link rel="stylesheet" href="src/style.css">
+	<!-- Icon library for UI icons -->
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+	<div class="app-background">
+		<div class="app-container">
+	<!-- Sidebar navigation -->
+			<aside class="sidebar">
+				<div class="sidebar__logo">
+					<i class="ph-fill ph-heartbeat"></i>
+				</div>
+				<nav class="sidebar__nav">
+					<a href="index.html" class="sidebar__nav-item sidebar__nav-item--active" title="Dashboard"><i class="ph ph-squares-four"></i></a>
+					<a href="schedule.html" class="sidebar__nav-item" title="Book Peer Support"><i class="ph ph-calendar-blank"></i></a>
+					<a href="chat.html" class="sidebar__nav-item" title="Messages & Reports"><i class="ph ph-chat-circle-dots"></i></a>
+					<a href="clinical.html" class="sidebar__nav-item" title="My Case Status"><i class="ph ph-folder-user"></i></a>
+					<a href="resources.html" class="sidebar__nav-item" title="Mental Health Resources"><i class="ph ph-book-open"></i></a>
+				</nav>
+				<div class="sidebar__bottom">
+					<a href="help.html" class="sidebar__nav-item" title="Help"><i class="ph ph-question"></i></a>
+					<a href="crisis.html" class="sidebar__nav-item" title="Crisis Support"><i class="ph ph-flag"></i></a>
+				</div>
+			</aside>
+
+			<main class="main-content">
+	<!-- Topbar with greeting and actions -->
+				<header class="topbar">
+					<h1 class="topbar__greeting">Welcome back! <span class="wave">🙌</span></h1>
+					<div class="topbar__actions">
+						<!-- Report button -->
+						<button class="btn btn--primary" style="padding: 8px 16px; font-size: 13px; height: 36px; border-radius: 20px;" onclick="window.location.href='chat.html'">
+							<i class="ph ph-warning-circle" style="margin-right: 4px;"></i> Submit Report
+						</button>
+						<!-- Notification/settings -->
+						<button class="icon-btn"><i class="ph ph-bell"></i></button>
+						<button class="icon-btn"><i class="ph ph-gear"></i></button>
+						<!-- Profile picture -->
+						<img src="https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff" alt="Profile" class="profile-pic">
+					</div>
+				</header>
+
+				<div class="dashboard">
+					<div class="dashboard__main">
+						<!-- Statistics cards -->
+						<div class="stats-row">
+							<!-- Progress Tracking Card -->
+							<div class="card stat-card">
+								<h3 class="card__title">Progress Tracking</h3>
+								<div class="stat-card__value">
+									<span class="number">14</span>
+									<span class="badge badge--success">+15%</span>
+								</div>
+								<p class="stat-card__desc">Therapy goals achieved over the last 3 months</p>
+								<div class="progress-bar"><div class="progress-bar__fill" style="width: 70%;"></div></div>
+							</div>
+							<!-- Educational Sources Card -->
+							<div class="card stat-card">
+								<h3 class="card__title">Educational Sources</h3>
+								<div class="stat-card__value">
+									<span class="number">22</span>
+									<span class="badge badge--info">-30%</span>
+								</div>
+								<ul class="stat-card__list">
+									<li><i class="ph-fill ph-check-circle"></i> Breathing and meditation techniques</li>
+									<li><i class="ph-fill ph-check-circle"></i> Identifying sources of stress</li>
+								</ul>
+							</div>
+							<!-- Peer Support Sessions Card -->
+							<div class="card stat-card">
+								<h3 class="card__title">Peer Support Sessions</h3>
+								<div class="stat-card__value">
+									<span class="number">6</span>
+									<span class="badge badge--success">+5%</span>
+								</div>
+								<p class="stat-card__desc">Sessions completed this month</p>
+								<div class="progress-bar"><div class="progress-bar__fill" style="width: 40%;"></div></div>
+							</div>
+						</div>
+
+						<!-- Middle row: chart and urgent support -->
+						<div class="middle-row">
+							<!-- TODO: Need to fix dashboard charts with JS after completing the dashboard. -->
+							<div class="card chart-card">
+								<div class="card__header">
+									<div>
+										<h3 class="card__title">Emotional State</h3>
+										<p class="card__subtitle">Based on self-tests, feedback, and peer session logs</p>
+									</div>
+									<div class="toggle-group">
+										<button class="toggle-btn toggle-btn--active">Week</button>
+										<button class="toggle-btn">Month</button>
+										<button class="toggle-btn">Year</button>
+									</div>
+								</div>
+								<div class="chart-container" id="emotionalChart">
+									<!-- Chart will be rendered here by JS -->
+								</div>
+							</div>
+							<!-- Urgent Support Card -->
+							<div class="card urgent-card">
+								<h3 class="urgent-card__title">Urgent Support & Reporting</h3>
+								<p class="urgent-card__desc">Quick access to crisis hotlines or submit an anonymous report securely.</p>
+								<button class="btn btn--glass" onclick="window.location.href='chat.html'">Submit Anonymous Report</button>
+							</div>
+						</div>
+
+						<!-- Exercises Card -->
+						<div class="card exercises-card">
+							<h3 class="card__title">My exercises</h3>
+							<p class="card__subtitle">Exercises to help maintain good physical health and support the progress of therapy</p>
+							<div class="exercise-list">
+								<!-- Exercise: Gratitude journal -->
+								<div class="exercise-item">
+									<div class="exercise-item__icon"><i class="ph ph-notebook"></i></div>
+									<div class="exercise-item__name">Gratitude journal</div>
+									<div class="exercise-item__progress">
+										<span class="progress-text">98%</span>
+										<div class="progress-bar progress-bar--sm"><div class="progress-bar__fill" style="width: 98%;"></div></div>
+									</div>
+									<div class="exercise-item__time">6h 32min</div>
+									<div class="exercise-item__category">Positive thinking</div>
+									<div class="exercise-item__stats">
+										<span><i class="ph ph-list-dashes"></i> 16</span>
+										<span><i class="ph ph-paperclip"></i> 3</span>
+									</div>
+								</div>
+								<!-- Exercise: The power of awareness -->
+								<div class="exercise-item">
+									<div class="exercise-item__icon"><i class="ph ph-lifebuoy"></i></div>
+									<div class="exercise-item__name">The power of awareness</div>
+									<div class="exercise-item__progress">
+										<span class="progress-text">55%</span>
+										<div class="progress-bar progress-bar--sm"><div class="progress-bar__fill" style="width: 55%;"></div></div>
+									</div>
+									<div class="exercise-item__time">11h 40min</div>
+									<div class="exercise-item__category">Mindfulness</div>
+									<div class="exercise-item__stats">
+										<span><i class="ph ph-paperclip"></i> 1</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Sidebar: Upcoming sessions and records -->
+					<aside class="dashboard__sidebar">
+						<!-- Upcoming Peer Sessions Card -->
+						<div class="card upcoming-card">
+							<h3 class="card__title">Upcoming Peer Sessions</h3>
+							<div class="calendar-strip">
+								<div class="cal-day"><span>Mo</span><span>21</span></div>
+								<div class="cal-day cal-day--active"><span>Tu</span><span>22</span></div>
+								<div class="cal-day"><span>We</span><span>23</span></div>
+								<div class="cal-day"><span>Th</span><span>24</span></div>
+								<div class="cal-day"><span>Fr</span><span>25</span></div>
+								<div class="cal-day"><span>Sat</span><span>26</span></div>
+								<div class="cal-day"><span>Su</span><span>27</span></div>
+							</div>
+							<div class="appointment-list">
+								<!-- Appointment: Peer Supporter -->
+								<div class="appointment">
+									<img src="https://ui-avatars.com/api/?name=Tanvir+Hassan&background=10B981&color=fff" alt="Peer Supporter" class="avatar">
+									<div class="appointment__info">
+										<h4>Tanvir Hassan</h4>
+										<p>Senior Peer Supporter</p>
+									</div>
+									<div class="appointment__time">
+										<span class="time">12:00</span>
+										<span class="date">Today</span>
+									</div>
+								</div>
+								<!-- Appointment: University Counselor -->
+								<div class="appointment">
+									<img src="https://ui-avatars.com/api/?name=Prof.+Farhana+Sultana&background=3B82F6&color=fff" alt="Counselor" class="avatar">
+									<div class="appointment__info">
+										<h4>Prof. Farhana Sultana</h4>
+										<p>University Counselor</p>
+									</div>
+									<div class="appointment__time">
+										<span class="time">18:30</span>
+										<span class="date">24 Aug</span>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn--primary btn--full" onclick="window.location.href='schedule.html'">Book Peer Support Session</button>
+						</div>
+
+						<!-- Case Status & Records Card -->
+						<div class="card records-card">
+							<h3 class="card__title">Case Status & Records</h3>
+							<p class="card__subtitle">Review your documented session notes and ongoing case status</p>
+							<div class="record-list">
+								<!-- Record: Anxiety Management -->
+								<div class="record-item">
+									<button class="play-btn"><i class="ph-fill ph-file-text"></i></button>
+									<div class="record-info">
+										<h4>Anxiety Management</h4>
+										<p>Status: Active • Logged Today</p>
+									</div>
+								</div>
+								<!-- Record: Study Stress Discussion -->
+								<div class="record-item">
+									<button class="play-btn"><i class="ph-fill ph-file-text"></i></button>
+									<div class="record-info">
+										<h4>Study Stress Discussion</h4>
+										<p>Status: Closed • Last Week</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</main>
+		</div>
+	</div>
+	<!-- Main JS for dashboard interactivity -->
+	<script src="src/main.js"></script>
+</body>
+</html>

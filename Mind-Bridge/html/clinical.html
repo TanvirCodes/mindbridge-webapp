@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Bridge - Clinical Monitoring</title>
+  <!-- Stylesheets for clinical page -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/clinical.css">
+  <!-- Icon library -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-background">
+    <div class="app-container">
+  <!-- Sidebar navigation -->
+      <aside class="sidebar">
+        <div class="sidebar__logo"><i class="ph-fill ph-heartbeat"></i></div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="sidebar__nav-item"><i class="ph ph-squares-four"></i></a>
+          <a href="schedule.html" class="sidebar__nav-item"><i class="ph ph-calendar-blank"></i></a>
+          <a href="chat.html" class="sidebar__nav-item"><i class="ph ph-chat-circle-dots"></i></a>
+          <a href="clinical.html" class="sidebar__nav-item sidebar__nav-item--active"><i class="ph ph-stethoscope"></i></a>
+          <a href="resources.html" class="sidebar__nav-item"><i class="ph ph-book-open"></i></a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a href="help.html" class="sidebar__nav-item"><i class="ph ph-question"></i></a>
+          <a href="crisis.html" class="sidebar__nav-item"><i class="ph ph-flag"></i></a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!-- Topbar with title and actions -->
+        <header class="topbar">
+          <div>
+            <h1 class="topbar__title">Supervisory Monitoring</h1>
+            <p class="card__subtitle" style="margin-top: 4px;">Track student well-being and review peer support cases</p>
+          </div>
+          <div class="topbar__actions">
+            <button class="icon-btn"><i class="ph ph-magnifying-glass"></i></button>
+            <button class="icon-btn"><i class="ph ph-bell"></i></button>
+            <img src="https://ui-avatars.com/api/?name=Sadia+Ahmed&background=0D8ABC&color=fff" alt="Profile" class="profile-pic">
+          </div>
+        </header>
+
+        <div class="dashboard__main" style="flex: 1;">
+          <div class="card" style="flex: 1;">
+            <!-- Table header with filters and new case button -->
+            <div class="table-header">
+              <h3 class="card__title">Active Student Cases</h3>
+              <div class="table-filters">
+                <button class="btn btn--outline"><i class="ph ph-funnel"></i> Filter</button>
+                <button class="btn btn--primary"><i class="ph ph-plus"></i> New Case</button>
+              </div>
+            </div>
+            
+            <!-- Table of student cases -->
+            <!-- TODO: Add export to CSV for case table -->
+            <div class="table-container">
+              <table class="clinical-table">
+                <thead>
+                  <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Risk Level</th>
+                    <th>Assigned Peer Supporter</th>
+                    <th>Last Check-in</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- High risk case -->
+                  <tr>
+                    <td>#STU-8492</td>
+                    <td><strong>Fatima Khan</strong></td>
+                    <td><span class="badge badge--danger">High Risk</span></td>
+                    <td>Sara Akhtar</td>
+                    <td>2 hours ago</td>
+                    <td><button class="btn btn--outline">Review Notes</button></td>
+                  </tr>
+                  <!-- Medium risk case -->
+                  <tr>
+                    <td>#STU-7721</td>
+                    <td><strong>Tanvir Hassan</strong></td>
+                    <td><span class="badge badge--warning">Medium</span></td>
+                    <td>David Ahmed</td>
+                    <td>Yesterday</td>
+                    <td><button class="btn btn--outline">Review Notes</button></td>
+                  </tr>
+                  <!-- Stable case -->
+                  <tr>
+                    <td>#STU-6511</td>
+                    <td><strong>Aisha Patel</strong></td>
+                    <td><span class="badge badge--success">Stable</span></td>
+                    <td>Sara Akhtar</td>
+                    <td>3 days ago</td>
+                    <td><button class="btn btn--outline">Review Notes</button></td>
+                  </tr>
+                  <!-- Unassigned high risk case -->
+                  <tr>
+                    <td>#STU-8990</td>
+                    <td><strong>John Doe</strong></td>
+                    <td><span class="badge badge--danger">High Risk</span></td>
+                    <td>Unassigned</td>
+                    <td>Just now</td>
+                    <td><button class="btn btn--primary">Assign Support</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

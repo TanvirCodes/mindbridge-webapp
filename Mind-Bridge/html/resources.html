@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Bridge - Resources</title>
+  <!-- Stylesheets for resources page -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/resources.css">
+  <!-- Icon library -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-background">
+    <div class="app-container">
+  <!-- Sidebar navigation -->
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <i class="ph-fill ph-heartbeat"></i>
+        </div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="sidebar__nav-item"><i class="ph ph-squares-four"></i></a>
+          <a href="schedule.html" class="sidebar__nav-item"><i class="ph ph-calendar-blank"></i></a>
+          <a href="chat.html" class="sidebar__nav-item"><i class="ph ph-chat-circle-dots"></i></a>
+          <a href="clinical.html" class="sidebar__nav-item"><i class="ph ph-stethoscope"></i></a>
+          <a href="resources.html" class="sidebar__nav-item sidebar__nav-item--active"><i class="ph ph-book-open"></i></a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a href="help.html" class="sidebar__nav-item"><i class="ph ph-question"></i></a>
+          <a href="crisis.html" class="sidebar__nav-item"><i class="ph ph-flag"></i></a>
+        </div>
+      </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content resources-layout">
+  <!-- Topbar with search and actions -->
+        <header class="topbar">
+          <h1 class="topbar__title">Resources</h1>
+          <div class="search-bar">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="text" placeholder="Search articles, guides, or videos">
+          </div>
+          <div class="topbar__actions">
+            <button class="icon-btn"><i class="ph ph-bell"></i></button>
+            <button class="icon-btn"><i class="ph ph-gear"></i></button>
+            <img src="https://ui-avatars.com/api/?name=Sadia+Ahmed&background=0D8ABC&color=fff" alt="Profile" class="profile-pic">
+          </div>
+        </header>
+
+        <div class="resources-content">
+          <!-- Header with recommended toggle -->
+          <div class="resources-header">
+            <h2 class="card__title" style="font-size: 18px;">Recommended for you</h2>
+            <div class="toggle-group">
+              <button class="toggle-btn toggle-btn--active">All</button>
+              <button class="toggle-btn">Articles</button>
+              <button class="toggle-btn">Videos</button>
+              <button class="toggle-btn">Exercises</button>
+            </div>
+          </div>
+
+          <!-- Resource Grid -->
+          <!-- TODO: Add filter for resource type -->
+          <div class="resource-grid">
+            <!-- Card 1: Anxiety Management Techniques -->
+            <div class="card resource-card">
+              <div class="resource-card__image bg-gradient-1">
+                <i class="ph-fill ph-brain"></i>
+              </div>
+              <div class="resource-card__content">
+                <span class="resource-badge">Guide</span>
+                <h3 class="resource-title">Anxiety Management Techniques</h3>
+                <p class="resource-desc">Learn practical grounding exercises to help manage acute anxiety and panic attacks.</p>
+                <div class="resource-meta">
+                  <span><i class="ph ph-clock"></i> 5 min read</span>
+                  <button class="btn btn--outline btn--sm">Read</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Exam Stress Guide -->
+            <div class="card resource-card">
+              <div class="resource-card__image bg-gradient-2">
+                <i class="ph-fill ph-books"></i>
+              </div>
+              <div class="resource-card__content">
+                <span class="resource-badge">Article</span>
+                <h3 class="resource-title">Exam Stress Guide</h3>
+                <p class="resource-desc">Strategies for effective studying, time management, and maintaining mental health during finals.</p>
+                <div class="resource-meta">
+                  <span><i class="ph ph-clock"></i> 8 min read</span>
+                  <button class="btn btn--outline btn--sm">Read</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Sleep Hygiene 101 -->
+            <div class="card resource-card">
+              <div class="resource-card__image bg-gradient-3">
+                <i class="ph-fill ph-moon-stars"></i>
+              </div>
+              <div class="resource-card__content">
+                <span class="resource-badge">Video</span>
+                <h3 class="resource-title">Sleep Hygiene 101</h3>
+                <p class="resource-desc">A comprehensive video guide on establishing a healthy bedtime routine for better rest.</p>
+                <div class="resource-meta">
+                  <span><i class="ph ph-play-circle"></i> 12 min watch</span>
+                  <button class="btn btn--outline btn--sm">Watch</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Navigating Social Anxiety -->
+            <div class="card resource-card">
+              <div class="resource-card__image bg-gradient-4">
+                <i class="ph-fill ph-users-three"></i>
+              </div>
+              <div class="resource-card__content">
+                <span class="resource-badge">Exercise</span>
+                <h3 class="resource-title">Navigating Social Anxiety</h3>
+                <p class="resource-desc">Interactive exercises to help you feel more comfortable in social situations on campus.</p>
+                <div class="resource-meta">
+                  <span><i class="ph ph-notebook"></i> 15 min activity</span>
+                  <button class="btn btn--outline btn--sm">Start</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Mindfulness for Beginners -->
+            <div class="card resource-card">
+              <div class="resource-card__image bg-gradient-5">
+                <i class="ph-fill ph-plant"></i>
+              </div>
+              <div class="resource-card__content">
+                <span class="resource-badge">Guide</span>
+                <h3 class="resource-title">Mindfulness for Beginners</h3>
+                <p class="resource-desc">Simple daily practices to stay present and reduce overwhelming thoughts.</p>
+                <div class="resource-meta">
+                  <span><i class="ph ph-clock"></i> 6 min read</span>
+                  <button class="btn btn--outline btn--sm">Read</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Balancing Work and Study -->
+            <div class="card resource-card">
+              <div class="resource-card__image bg-gradient-6">
+                <i class="ph-fill ph-calendar-check"></i>
+              </div>
+              <div class="resource-card__content">
+                <span class="resource-badge">Article</span>
+                <h3 class="resource-title">Balancing Work and Study</h3>
+                <p class="resource-desc">Tips from senior students on how to manage a part-time job alongside your degree.</p>
+                <div class="resource-meta">
+                  <span><i class="ph ph-clock"></i> 10 min read</span>
+                  <button class="btn btn--outline btn--sm">Read</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

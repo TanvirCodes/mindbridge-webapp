@@ -1,0 +1,114 @@
+
+/* =====================
+	 Help Page Styles
+	 ===================== */
+
+/* Main help container */
+.help-container {
+	max-width: 800px;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+}
+
+/* Search card at the top */
+.help-search-card {
+	align-items: center;
+	text-align: center;
+	padding: 40px var(--spacing-lg);
+	background: linear-gradient(to right, #e0f2fe, #fff);
+}
+
+/* Search box styling */
+.help-search-box {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: white;
+	padding: 16px 24px;
+	border-radius: var(--radius-full);
+	width: 100%;
+	max-width: 500px;
+	margin-top: 20px;
+	box-shadow: var(--shadow-sm);
+	border: 1px solid #e2e8f0;
+}
+
+/* Input in search box */
+.help-search-box input {
+	border: none;
+	outline: none;
+	width: 100%;
+	font-size: 16px;
+	font-family: var(--font-family);
+}
+
+/* Search icon */
+.help-search-box i {
+	color: var(--accent-blue);
+	font-size: 20px;
+}
+
+/* FAQ section layout */
+.faq-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+/* FAQ card container */
+.faq-card {
+	padding: 0;
+}
+
+/* Individual FAQ item */
+.faq-item {
+	border-bottom: 1px solid #f1f5f9;
+	padding: 20px;
+	cursor: pointer;
+}
+
+/* Remove border from last FAQ item */
+.faq-item:last-child {
+	border-bottom: none;
+}
+
+/* FAQ summary row */
+.faq-item summary {
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--text-main);
+	outline: none;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Hide default marker */
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
+/* Plus icon for closed FAQ */
+.faq-item summary::after {
+	content: "+";
+	color: var(--accent-blue);
+	font-size: 20px;
+	font-weight: 400;
+}
+
+/* Minus icon for open FAQ */
+.faq-item[open] summary::after {
+	content: "-";
+}
+
+/* FAQ answer paragraph */
+.faq-item p {
+	margin-top: 12px;
+	font-size: 14px;
+	color: var(--text-muted);
+	line-height: 1.6;
+}

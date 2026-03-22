@@ -1,0 +1,438 @@
+
+/* =====================
+   Schedule Page Layout
+   ===================== */
+.schedule-content {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+  height: calc(100% - 80px);
+}
+
+.filter-sidebar {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.filter-card {
+  gap: var(--spacing-md);
+}
+
+.doctor-list, .type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.avatar--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.doc-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.doc-role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.filter-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.filter-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  color: var(--text-main);
+}
+
+.type-name {
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+
+/* =====================
+   Custom Checkbox
+   ===================== */
+.custom-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.custom-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.custom-checkbox-container input:checked ~ .checkmark {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+.checkmark:after {
+  content: "";
+  display: none;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+.custom-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+/* =====================
+   Topbar Search
+   ===================== */
+.topbar__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  width: 300px;
+  box-shadow: var(--shadow-sm);
+}
+.search-bar i {
+  color: var(--text-muted);
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-family: var(--font-family);
+}
+
+
+/* =====================
+   Calendar Area
+   ===================== */
+.calendar-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.calendar-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.current-date {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.calendar-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.btn--outline {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn--outline:hover {
+  background: #f8fafc;
+}
+
+
+/* =====================
+   Calendar Grid
+   ===================== */
+.calendar-grid-container {
+  flex: 1;
+  overflow: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+}
+
+.calendar-grid {
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-header-row {
+  display: grid;
+  grid-template-columns: 80px repeat(4, 1fr);
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.grid-cell-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-right: 1px solid #e2e8f0;
+}
+.grid-cell-header:last-child {
+  border-right: none;
+}
+
+.nav-arrows {
+  display: flex;
+  gap: 8px;
+}
+.nav-arrows button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+.nav-arrows button:hover {
+  color: var(--text-main);
+}
+
+.grid-body {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  position: relative;
+}
+
+.time-labels {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e8f0;
+  background: white;
+}
+
+.time-label {
+  height: 120px;
+  padding: 16px 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: right;
+  box-sizing: border-box;
+  border-bottom: 1px solid transparent;
+}
+
+.day-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.grid-lines {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.grid-line {
+  height: 120px;
+  border-bottom: 1px solid #f1f5f9;
+  box-sizing: border-box;
+}
+
+.doc-col {
+  position: relative;
+  border-right: 1px solid #f1f5f9;
+}
+.doc-col:last-child {
+  border-right: none;
+}
+
+
+/* =====================
+   Appointment Cards
+   ===================== */
+.appointment-card {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 5;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  z-index: 15;
+}
+
+.appointment-card.striped {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffffff,
+    #ffffff 10px,
+    #f8fafc 10px,
+    #f8fafc 20px
+  );
+}
+
+.appointment-card h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.appointment-card p {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.appointment-card .time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: auto;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.5);
+}
+
+
+/* =====================
+   Connecting Line
+   ===================== */
+.connecting-line {
+  position: absolute;
+  height: 2px;
+  background-color: #38bdf8;
+  z-index: 10;
+  pointer-events: none;
+}
+.connecting-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 0 4px white;
+}
+
+
+/* =====================
+   Responsive Styles
+   ===================== */
+@media (max-width: 1200px) {
+  .schedule-content {
+    flex-direction: column;
+  }
+  .filter-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .filter-card {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-sidebar {
+    display: none;
+  }
+  .calendar-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .calendar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+

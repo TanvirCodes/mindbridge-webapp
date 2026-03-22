@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Bridge - Help & FAQ</title>
+  <!-- Main and help stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/help.css">
+  <!-- Icon library -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-background">
+    <div class="app-container">
+      <!-- Sidebar navigation -->
+      <aside class="sidebar">
+        <div class="sidebar__logo"><i class="ph-fill ph-heartbeat"></i></div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="sidebar__nav-item"><i class="ph ph-squares-four"></i></a>
+          <a href="schedule.html" class="sidebar__nav-item"><i class="ph ph-calendar-blank"></i></a>
+          <a href="chat.html" class="sidebar__nav-item"><i class="ph ph-chat-circle-dots"></i></a>
+          <a href="clinical.html" class="sidebar__nav-item"><i class="ph ph-stethoscope"></i></a>
+          <a href="resources.html" class="sidebar__nav-item"><i class="ph ph-book-open"></i></a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a href="help.html" class="sidebar__nav-item sidebar__nav-item--active"><i class="ph ph-question"></i></a>
+          <a href="crisis.html" class="sidebar__nav-item"><i class="ph ph-flag"></i></a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!-- Topbar with title and profile -->
+        <header class="topbar">
+          <h1 class="topbar__title">Help Center & FAQ</h1>
+          <div class="topbar__actions">
+            <img src="https://ui-avatars.com/api/?name=Sadia+Ahmed&background=0D8ABC&color=fff" alt="Profile" class="profile-pic">
+          </div>
+        </header>
+
+        <div class="help-container">
+          <!-- Search card for help -->
+          <div class="card help-search-card">
+            <h2 class="card__title" style="font-size: 20px;">How can we help you today?</h2>
+            <div class="help-search-box">
+              <i class="ph ph-magnifying-glass"></i>
+              <input type="text" placeholder="Search for guides, policies, or technical support...">
+            </div>
+          </div>
+
+          <!-- FAQ section -->
+          <div class="faq-section">
+            <h3 class="card__title">Frequently Asked Questions</h3>
+            <div class="card faq-card">
+              <!-- FAQ 1 -->
+              <details class="faq-item">
+                <summary>Is my data and chat history completely anonymous?</summary>
+                <p>Yes. When you toggle "Anonymous Mode" in the chat interface, your identity is masked from peer supporters. Only the system administrator can link accounts in severe emergency situations to save a life.</p>
+              </details>
+              <!-- FAQ 2 -->
+              <details class="faq-item">
+                <summary>How do I book a session with a therapist?</summary>
+                <p>Navigate to the Schedule tab (Calendar icon). You can filter doctors by specialization and click any available white slot on the timeline to request a booking.</p>
+              </details>
+              <!-- FAQ 3 -->
+              <details class="faq-item">
+                <summary>What is a Peer Supporter?</summary>
+                <p>Peer supporters are fellow students trained in mental health first aid. They are here to listen, offer structural support, and guide you to professional resources if needed.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

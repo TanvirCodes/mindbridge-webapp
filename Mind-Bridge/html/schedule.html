@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Bridge - Schedule</title>
+  <!-- Main and schedule stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/schedule.css">
+  <!-- Icon library -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-background">
+    <div class="app-container">
+      <!-- Sidebar navigation -->
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <i class="ph-fill ph-heartbeat"></i>
+        </div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="sidebar__nav-item"><i class="ph ph-squares-four"></i></a>
+          <a href="schedule.html" class="sidebar__nav-item sidebar__nav-item--active"><i class="ph ph-calendar-blank"></i></a>
+          <a href="chat.html" class="sidebar__nav-item"><i class="ph ph-chat-circle-dots"></i></a>
+          <a href="clinical.html" class="sidebar__nav-item"><i class="ph ph-stethoscope"></i></a>
+          <a href="resources.html" class="sidebar__nav-item"><i class="ph ph-book-open"></i></a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a href="help.html" class="sidebar__nav-item"><i class="ph ph-question"></i></a>
+          <a href="crisis.html" class="sidebar__nav-item"><i class="ph ph-flag"></i></a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content schedule-layout">
+        <!-- Topbar with search and actions -->
+        <header class="topbar">
+          <h1 class="topbar__title">Schedule</h1>
+          <div class="search-bar">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="topbar__actions">
+            <button class="icon-btn"><i class="ph ph-bell"></i></button>
+            <button class="icon-btn"><i class="ph ph-gear"></i></button>
+            <img src="https://ui-avatars.com/api/?name=Sadia+Ahmed&background=0D8ABC&color=fff" alt="Profile" class="profile-pic">
+          </div>
+        </header>
+
+        <div class="schedule-content">
+          <!-- Filter Sidebar for doctors and consultation types -->
+          <aside class="filter-sidebar">
+            <div class="card filter-card">
+              <h3 class="card__title">Doctors</h3>
+              <p class="card__subtitle">Plan your schedule and review your colleagues' workload</p>
+              
+              <!-- List of doctors (checkboxes) -->
+              <div class="doctor-list">
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <img src="https://ui-avatars.com/api/?name=Prof.+Farhana+Sultana&background=3B82F6&color=fff" class="avatar avatar--sm">
+                  <div class="doc-info">
+                    <span class="doc-name">Prof. Farhana Sultana <span class="text-muted">(You)</span></span>
+                    <span class="doc-role">Family Counselor</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="filter-header-row">
+                <span class="filter-subtitle">Others</span>
+                <button class="clear-btn">Clear all</button>
+              </div>
+              
+              <!-- Other doctors -->
+              <div class="doctor-list">
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <img src="https://ui-avatars.com/api/?name=Fatima+Khan&background=10B981&color=fff" class="avatar avatar--sm">
+                  <div class="doc-info">
+                    <span class="doc-name">Fatima Khan</span>
+                    <span class="doc-role">Psychotherapist</span>
+                  </div>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <img src="https://ui-avatars.com/api/?name=Dr.+Rahman&background=F59E0B&color=fff" class="avatar avatar--sm">
+                  <div class="doc-info">
+                    <span class="doc-name">Dr. Rahman</span>
+                    <span class="doc-role">Psychiatrist</span>
+                  </div>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <img src="https://ui-avatars.com/api/?name=Nazma+Sultana&background=8B5CF6&color=fff" class="avatar avatar--sm">
+                  <div class="doc-info">
+                    <span class="doc-name">Nazma Sultana</span>
+                    <span class="doc-role">Child Psychologist</span>
+                  </div>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <img src="https://ui-avatars.com/api/?name=Karim+Ahmed&background=EC4899&color=fff" class="avatar avatar--sm">
+                  <div class="doc-info">
+                    <span class="doc-name">Karim Ahmed</span>
+                    <span class="doc-role">Psychiatrist</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="card filter-card">
+              <h3 class="card__title">Type of Consultation</h3>
+              <div class="type-list">
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <span class="type-name">Psychotherapy</span>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <span class="type-name">Psychiatric consultation</span>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="type-name">Child psychology</span>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  <span class="type-name">Family therapy</span>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="type-name">Gestalt therapy</span>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="type-name">Art therapy</span>
+                </label>
+                <label class="custom-checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="type-name">Sleep therapy</span>
+                </label>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Calendar Area for appointments -->
+          <div class="card calendar-area">
+            <div class="calendar-header-top">
+                <div><!-- TODO: Add drag-and-drop for appointments -->
+                <h2 class="card__title" style="font-size: 18px;">Appointments</h2>
+                <p class="card__subtitle">Stay organized and on track with calendar</p>
+              </div>
+              <button class="btn btn--primary"><i class="ph ph-plus"></i> Add new</button>
+            </div>
+            
+            <!-- Calendar controls (date, view toggles) -->
+            <div class="calendar-controls">
+              <span class="current-date">22 August 2024</span>
+              <div class="calendar-actions">
+                <div class="toggle-group">
+                  <button class="toggle-btn toggle-btn--active">Day</button>
+                  <button class="toggle-btn">Week</button>
+                  <button class="toggle-btn">Month</button>
+                </div>
+                <button class="btn btn--outline"><i class="ph ph-calendar-blank"></i> 22 Aug</button>
+              </div>
+            </div>
+
+            <!-- Calendar grid for appointments -->
+            <div class="calendar-grid-container">
+              <div class="calendar-grid">
+                <div class="grid-header-row">
+                  <div class="grid-cell-header empty-cell">
+                    <div class="nav-arrows">
+                      <button><i class="ph ph-caret-left"></i></button>
+                      <button><i class="ph ph-caret-right"></i></button>
+                    </div>
+                  </div>
+                  <!-- Doctor columns -->
+                  <div class="grid-cell-header doc-header">
+                    <img src="https://ui-avatars.com/api/?name=Prof.+Farhana+Sultana&background=3B82F6&color=fff" class="avatar">
+                    <div class="doc-info">
+                      <span class="doc-name">Prof. Farhana Sultana</span>
+                      <span class="doc-role">Family Counselor</span>
+                    </div>
+                  </div>
+                  <div class="grid-cell-header doc-header">
+                    <img src="https://ui-avatars.com/api/?name=Karim+Ahmed&background=EC4899&color=fff" class="avatar">
+                    <div class="doc-info">
+                      <span class="doc-name">Karim Ahmed</span>
+                      <span class="doc-role">Psychiatrist</span>
+                    </div>
+                  </div>
+                  <div class="grid-cell-header doc-header">
+                    <img src="https://ui-avatars.com/api/?name=Nazma+Sultana&background=8B5CF6&color=fff" class="avatar">
+                    <div class="doc-info">
+                      <span class="doc-name">Nazma Sultana</span>
+                      <span class="doc-role">Child Psychologist</span>
+                    </div>
+                  </div>
+                  <div class="grid-cell-header doc-header">
+                    <img src="https://ui-avatars.com/api/?name=Dr.+Rahman&background=F59E0B&color=fff" class="avatar">
+                    <div class="doc-info">
+                      <span class="doc-name">Dr. Rahman</span>
+                      <span class="doc-role">Psychiatrist</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="grid-body">
+                  <!-- Time labels -->
+                  <div class="time-labels">
+                    <div class="time-label">9 am</div>
+                    <div class="time-label">10 am</div>
+                    <div class="time-label">11 am</div>
+                    <div class="time-label">12 am</div>
+                    <div class="time-label">1 pm</div>
+                    <div class="time-label">2 pm</div>
+                  </div>
+                  
+                  <!-- Day columns for each doctor -->
+                  <div class="day-columns">
+                    <div class="grid-lines">
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                    </div>
+                    
+                    <div class="doc-col" id="col-darlene"></div>
+                    <div class="doc-col" id="col-michael"></div>
+                    <div class="doc-col" id="col-max"></div>
+                    <div class="doc-col" id="col-mccoy"></div>
+                    
+                    <div class="connecting-line" id="nichols-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!-- Main JS for schedule functionality -->
+  <script src="../js/schedule.js"></script>
+</body>
+</html>

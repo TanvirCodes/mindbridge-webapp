@@ -1,0 +1,74 @@
+
+/* =====================
+	 Crisis Page Styles
+	 ===================== */
+
+/* Main container for crisis page */
+.crisis-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+}
+
+/* Alert card for urgent messages */
+.crisis-alert-card {
+	background: var(--danger-bg);
+	border: 1px solid #fca5a5;
+	align-items: center;
+	text-align: center;
+	padding: 40px var(--spacing-lg);
+}
+
+/* Icon in alert card */
+.crisis-alert-card i {
+	font-size: 48px;
+	color: var(--danger-color);
+	margin-bottom: 16px;
+}
+
+/* Heading in alert card */
+.crisis-alert-card h2 {
+	color: var(--danger-color);
+	margin-bottom: 8px;
+	font-size: 24px;
+}
+
+/* Paragraph in alert card */
+.crisis-alert-card p {
+	color: #991b1b;
+	max-width: 600px;
+	margin-bottom: 24px;
+	line-height: 1.5;
+}
+
+/* List of hotlines */
+.hotline-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+/* Individual hotline item */
+.hotline-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	background: #f8fafc;
+	border-radius: var(--radius-md);
+	border: 1px solid #e2e8f0;
+}
+
+/* Hotline item title */
+.hotline-item h4 {
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--text-main);
+	margin-bottom: 4px;
+}
+
+/* Hotline item description */
+.hotline-item p {
+	font-size: 13px;
+	color: var(--text-muted);
+}

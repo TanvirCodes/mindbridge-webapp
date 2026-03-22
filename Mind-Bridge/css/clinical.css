@@ -1,0 +1,58 @@
+
+/* =====================
+	 Clinical Table Styles
+	 ===================== */
+
+/* Table header row: layout and spacing */
+.table-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--spacing-lg);
+}
+
+/* Filters row: horizontal spacing */
+.table-filters {
+	display: flex;
+	gap: var(--spacing-sm);
+}
+
+/* Table container: horizontal scroll for overflow */
+.table-container {
+	overflow-x: auto;
+	flex: 1;
+}
+
+/* Main clinical table styles */
+.clinical-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+/* Table header cells */
+.clinical-table th {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-muted);
+	padding: 16px;
+	border-bottom: 2px solid #f1f5f9;
+}
+
+/* Table data cells */
+.clinical-table td {
+	padding: 16px;
+	font-size: 14px;
+	border-bottom: 1px solid #f1f5f9;
+	vertical-align: middle;
+}
+
+/* Row hover effect */
+.clinical-table tbody tr:hover {
+	background-color: #f8fafc;
+}
+
+/* Strong text in table */
+.clinical-table strong {
+	color: var(--text-main);
+}

@@ -1,0 +1,127 @@
+
+/* =====================
+   Authentication Pages Styles
+   ===================== */
+
+/* Center the authentication page vertically and horizontally */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  width: 100%;
+}
+
+/* Glassmorphic card for login/register */
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  text-align: center;
+  background: var(--bg-card); /* Glassmorphism from style.css */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-app);
+}
+
+/* Logo styling */
+.auth-logo {
+  color: var(--color-primary-blue);
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+/* Main title */
+.auth-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+/* Subtitle text */
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* Form group spacing and alignment */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Label styling for form fields */
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+/* Input field styling */
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border-divider);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+  background: #F8FAFC;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary-blue);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Role Selector for Login */
+.role-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.role-option {
+  flex: 1;
+  text-align: center;
+  padding: 12px 8px;
+  border: 2px solid var(--border-divider);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: 0.2s;
+  background: white;
+}
+
+.role-option.selected {
+  background: var(--badge-info-bg);
+  color: var(--color-primary-blue);
+  border-color: var(--color-primary-blue);
+}
+
+.auth-footer {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--color-primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}

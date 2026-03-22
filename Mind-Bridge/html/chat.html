@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Bridge - Peer Support & Reporting</title>
+  <!-- Stylesheets for chat page -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/chat.css">
+  <!-- Icon library -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-background">
+    <div class="app-container">
+  <!-- Sidebar navigation -->
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <i class="ph-fill ph-heartbeat"></i>
+        </div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="sidebar__nav-item"><i class="ph ph-squares-four"></i></a>
+          <a href="schedule.html" class="sidebar__nav-item"><i class="ph ph-calendar-blank"></i></a>
+          <a href="chat.html" class="sidebar__nav-item sidebar__nav-item--active"><i class="ph ph-chat-circle-dots"></i></a>
+          <a href="clinical.html" class="sidebar__nav-item"><i class="ph ph-stethoscope"></i></a>
+          <a href="resources.html" class="sidebar__nav-item"><i class="ph ph-book-open"></i></a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a href="help.html" class="sidebar__nav-item"><i class="ph ph-question"></i></a>
+          <a href="crisis.html" class="sidebar__nav-item"><i class="ph ph-flag"></i></a>
+        </div>
+      </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content chat-layout">
+        
+  <!-- Left Pane: Chat List -->
+        <aside class="chat-sidebar card">
+          <div class="chat-sidebar__header">
+            <h2 class="card__title" style="font-size: 18px;">Messages</h2>
+            <button class="icon-btn"><i class="ph ph-pencil-simple"></i></button>
+          </div>
+          
+          <!-- Search bar for messages -->
+          <div class="search-bar search-bar--full">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="text" placeholder="Search messages">
+          </div>
+
+          <!-- Anonymous mode toggle -->
+          <div class="anonymous-toggle-container">
+            <div class="toggle-info">
+              <span class="toggle-label">Anonymous Mode</span>
+              <span class="toggle-desc">Hide your identity in reports</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="anonymousToggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <!-- Chat list with sample conversations -->
+          <div class="chat-list">
+            <!-- Peer Supporter chat -->
+            <div class="chat-item chat-item--active">
+              <div class="chat-item__avatar bg-blue">
+                <i class="ph-fill ph-users"></i>
+              </div>
+              <div class="chat-item__content">
+                <div class="chat-item__top">
+                  <span class="chat-item__name">Peer Supporter</span>
+                  <span class="chat-item__time">10:42 AM</span>
+                </div>
+                <p class="chat-item__preview">I'm here to listen. How are you feeling today?</p>
+              </div>
+            </div>
+
+            <!-- Urgent Report Line chat -->
+            <div class="chat-item">
+              <div class="chat-item__avatar bg-red">
+                <i class="ph-fill ph-warning-circle"></i>
+              </div>
+              <div class="chat-item__content">
+                <div class="chat-item__top">
+                  <span class="chat-item__name">Urgent Report Line</span>
+                  <span class="chat-item__time">Yesterday</span>
+                </div>
+                <p class="chat-item__preview">Your report has been received securely.</p>
+              </div>
+            </div>
+
+            <!-- System Bot chat -->
+            <div class="chat-item">
+              <div class="chat-item__avatar bg-gray">
+                <i class="ph-fill ph-robot"></i>
+              </div>
+              <div class="chat-item__content">
+                <div class="chat-item__top">
+                  <span class="chat-item__name">System Bot</span>
+                  <span class="chat-item__time">Mon</span>
+                </div>
+                <p class="chat-item__preview">Here is your weekly summary.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+  <!-- Main Pane: Chat Window -->
+  <!-- TODO: Add typing indicator for chat window -->
+        <section class="chat-window card">
+          <header class="chat-window__header">
+            <div class="chat-window__info">
+              <div class="chat-item__avatar bg-blue">
+                <i class="ph-fill ph-users"></i>
+              </div>
+              <div>
+                <h3 class="chat-window__name">Peer Supporter</h3>
+                <span class="chat-window__status">Online</span>
+              </div>
+            </div>
+            <div class="chat-window__actions">
+              <button class="icon-btn"><i class="ph ph-phone"></i></button>
+              <button class="icon-btn"><i class="ph ph-video-camera"></i></button>
+              <button class="icon-btn"><i class="ph ph-dots-three-vertical"></i></button>
+            </div>
+          </header>
+
+          <!-- Chat history/messages -->
+          <div class="chat-history" id="chatHistory">
+            <div class="chat-date-divider"><span>Today</span></div>
+            
+            <!-- Incoming message from peer supporter -->
+            <div class="message message--incoming">
+              <div class="message__bubble">
+                Hi there. I'm a trained peer supporter. This space is safe and confidential. How can I help you today?
+              </div>
+              <span class="message__time">10:40 AM</span>
+            </div>
+
+            <!-- Outgoing message from user -->
+            <div class="message message--outgoing">
+              <div class="message__bubble">
+                I've been feeling really overwhelmed with exams lately. I can't seem to focus.
+              </div>
+              <span class="message__time">10:41 AM</span>
+            </div>
+
+            <!-- Incoming message from peer supporter -->
+            <div class="message message--incoming">
+              <div class="message__bubble">
+                I completely understand. Exam season is incredibly stressful. It's totally normal to feel overwhelmed. Have you tried any specific techniques to break down your study sessions?
+              </div>
+              <span class="message__time">10:42 AM</span>
+            </div>
+          </div>
+
+          <!-- Chat input area -->
+          <div class="chat-input-area">
+            <button class="icon-btn"><i class="ph ph-paperclip"></i></button>
+            <input type="text" id="chatInput" placeholder="Type your message here..." autocomplete="off">
+            <button class="icon-btn"><i class="ph ph-smiley"></i></button>
+            <button class="btn btn--primary send-btn" id="sendBtn"><i class="ph-fill ph-paper-plane-right"></i></button>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+  <!-- Main JS for chat functionality -->
+  <script src="../js/chat.js"></script>
+</body>
+</html>
